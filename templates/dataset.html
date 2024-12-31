@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="header">
+    <h2>Dataset</h2>
+    <div class="info">
+        <span>Jumlah Data : {{ total }}</span>
+    </div>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>IPK</th>
+            <th>IPS1</th>
+            <th>IPS2</th>
+            <th>IPS3</th>
+            <th>IPS4</th>
+            <th>Cuti</th>
+            <th>MK Tidak Lulus</th>
+            <th>Umur</th>
+            <th>Label Kelas</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ row["IPK"] }}</td>
+            <td>{{ row["IPS1"] }}</td>
+            <td>{{ row["IPS2"] }}</td>
+            <td>{{ row["IPS3"] }}</td>
+            <td>{{ row["IPS4"] }}</td>
+            <td>{{ row["CUTI"] }}</td>
+            <td>{{ row["MATA KULIAH TIDAK LULUS"] }}</td>
+            <td>{{ row["UMUR"] }}</td>
+            <td>{{ row["LABEL KELAS"] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="pagination">
+    <button>Previous</button>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>Next</button>
+</div>
+{% endblock %}

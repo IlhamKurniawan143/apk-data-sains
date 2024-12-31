@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Klasifikasi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>Sistem Klasifikasi Kelulusan Mahasiswa</h1>
+    </div>
+    
+    <div class="sidebar">
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <ul>
+            <li><a href="#">Dataset</a></li>
+            <li><a href="#">Data Training</a></li>
+            <li><a href="#">Data Testing</a></li>
+            <li><a href="#">Profil</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
